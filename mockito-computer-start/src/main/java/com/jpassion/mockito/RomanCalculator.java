@@ -10,33 +10,39 @@ public class RomanCalculator {
 		String num5="XX";
 		String num6="XXV";
 		String num7="XXX";
+		String inputnum= i+"";
+		String gen = generadorNumerosRomanos(num,"5","4",inputnum);
 
-		if(i<4) {
-			for(int j=0;j<i;j++) {
-				num=  num + "I";
-			}
-			return num;		
-		}else if(i<9) {
-			if(i==4) {
-				return "IV";
-			}else {
-				for(int a=0; a<(i-5);a++) {
-					num2 = num2 + "I";
-				}
-				return num2;
-			}
-
-		}else if(i<14){
-			if(i==9) {
-				return "IX";
-			}else {
-				for(int a=0; a<(i-10);a++) {
-					num3 = num3 + "I";
-				}
-				return num3;
-			}
-		}
-		return "XIV";
+//		if(i<4) {
+//			for(int j=0;j<i;j++) {
+//				num=  num + "I";
+//			}
+//			return num;		
+//		}else if(i<9) {
+//			if(i==4) {
+//				return "IV";
+//			}else {
+//				for(int a=0; a<(i-5);a++) {
+//					num2 = num2 + "I";
+//				}
+//				return num2;
+//			}
+//
+//		}else if(i<14){
+//			if(i==9) {
+//				return "IX";
+//			}else {
+//				for(int a=0; a<(i-10);a++) {
+//					num3 = num3 + "I";
+//				}
+//				return num3;
+//			}
+//		}else if(i<19) {
+//			generadorNumerosRomanos(num4,"19","14",);
+//		}
+//		
+//		
+		return gen;
 	
 	}
 	

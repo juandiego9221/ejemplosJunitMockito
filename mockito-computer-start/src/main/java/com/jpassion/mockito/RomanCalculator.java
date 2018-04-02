@@ -6,6 +6,10 @@ public class RomanCalculator {
 		String num="";
 		String num2="V";
 		String num3="X";
+		String num4="XV";
+		String num5="XX";
+		String num6="XXV";
+		String num7="XXX";
 
 		if(i<4) {
 			for(int j=0;j<i;j++) {
@@ -36,20 +40,24 @@ public class RomanCalculator {
 	
 	}
 	
-	
-	private String calculadorRomano(int i,int base,int maximo,String romanoBase, 
-			int indicador, String numero1, String numRomano,String cadena) {
+	public String generadorNumerosRomanos(String numPrincipal,String numLimite,String numAnterior,String input) {
+		int numeroPrincipal = Integer.parseInt(numPrincipal);
+		int numeroLimite = Integer.parseInt(numLimite);
+		int numeroAnterior = Integer.parseInt(numAnterior);
+		int numeroInput = Integer.parseInt(input);
 		
-		if(i==base) {
-			return romanoBase;
-		}else {
-			for(int a=0; a<(i-(maximo-base));a++) {
-				numRomano = numRomano + cadena;
+		if(numeroInput < numeroLimite) {
+			if(numeroInput == numeroAnterior) {
+				return "I" + numPrincipal;
+			}else {
+				for(int a = 0; a < (numeroInput-numeroPrincipal); a++) {
+					numPrincipal = numPrincipal + "I";
+				}
+				return numPrincipal;
 			}
-			return numRomano;
 		}
+		return numPrincipal;
 	}
-	
 	
 
 }

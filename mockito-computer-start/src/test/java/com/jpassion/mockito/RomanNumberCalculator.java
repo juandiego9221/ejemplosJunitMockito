@@ -24,20 +24,20 @@ public class RomanNumberCalculator {
 
 	}
 	
-//	@Test
-//	public void should_return_II_when_number_is_two() {
-//		assertThat(roman.transform(2), is("II"));
-//	}
+	@Test
+	public void should_return_II_when_number_is_two() {
+		assertThat(roman.transform(2), is("II"));
+	}
 //	
-//	@Test
-//	public void should_return_II_when_number_is_three() {
-//		assertThat(roman.transform(3), is("III"));
-//	}
+	@Test
+	public void should_return_II_when_number_is_three() {
+		assertThat(roman.transform(3), is("III"));
+	}
 //	
-//	@Test
-//	public void should_return_II_when_number_is_four() {
-//		assertThat(roman.transform(4), is("IV"));
-//	}
+	@Test
+	public void should_return_II_when_number_is_four() {
+		assertThat(roman.transform(4), is("IV"));
+	}
 //	
 //	@Test
 //	public void should_return_II_when_number_is_five() {

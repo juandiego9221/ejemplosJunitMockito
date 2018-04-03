@@ -10,8 +10,9 @@ public class RomanCalculator {
 		String num5="XX";
 		String num6="XXV";
 		String num7="XXX";
-		String inputnum= i+"";
-		String gen = generadorNumerosRomanos(num,"5","4",inputnum);
+		
+		String gen = generadorNumerosRomanos("","V","5","4",i);
+		
 
 //		if(i<4) {
 //			for(int j=0;j<i;j++) {
@@ -46,17 +47,20 @@ public class RomanCalculator {
 	
 	}
 	
-	public String generadorNumerosRomanos(String numPrincipal,String numLimite,String numAnterior,String input) {
-		int numeroPrincipal = Integer.parseInt(numPrincipal);
+	public String generadorNumerosRomanos(String numPrincipal,String numeroPriSiguiente,String numLimite,String numAnterior,int input) {
 		int numeroLimite = Integer.parseInt(numLimite);
 		int numeroAnterior = Integer.parseInt(numAnterior);
-		int numeroInput = Integer.parseInt(input);
 		
-		if(numeroInput < numeroLimite) {
-			if(numeroInput == numeroAnterior) {
-				return "I" + numPrincipal;
+		if(input < numeroLimite) {
+			if(input == numeroAnterior) {
+				return "I" + numeroPriSiguiente;
 			}else {
-				for(int a = 0; a < (numeroInput-numeroPrincipal); a++) {
+				if(input<4) {
+					for(int a = 0; a < input; a++) {
+						numPrincipal = numPrincipal + "I";
+					}
+				}
+				for(int a = 0; a < (input-(numeroLimite+1)); a++) {
 					numPrincipal = numPrincipal + "I";
 				}
 				return numPrincipal;
